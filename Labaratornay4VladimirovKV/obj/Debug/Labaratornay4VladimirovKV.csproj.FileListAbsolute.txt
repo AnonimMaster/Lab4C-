@@ -1,0 +1,10 @@
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\bin\Debug\Labaratornay4VladimirovKV.exe.config
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\bin\Debug\Labaratornay4VladimirovKV.exe
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\bin\Debug\Labaratornay4VladimirovKV.pdb
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.csprojAssemblyReference.cache
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.Form1.resources
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.Properties.Resources.resources
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.csproj.GenerateResource.cache
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.csproj.CoreCompileInputs.cache
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.exe
+D:\source\repos\Labaratornay4VladimirovKV\Labaratornay4VladimirovKV\obj\Debug\Labaratornay4VladimirovKV.pdb
