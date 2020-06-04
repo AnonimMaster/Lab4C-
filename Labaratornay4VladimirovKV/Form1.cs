@@ -21,18 +21,18 @@ namespace Labaratornay4VladimirovKV
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Graphics graph = Graphics.FromImage(bmp);
+			Graphics graph = Graphics.FromImage(bmp);	//Создаем интерфейс Graphics для работы с изображениями
 			int W = pictureBox1.ClientSize.Width;
 			int H = pictureBox1.ClientSize.Height;
 
-			Rectangle SquartOne = new Rectangle(0, 0, W , H);
-			Brush BrushSquart = DrafManager.RandomColorBrush();
+			Rectangle SquartOne = new Rectangle(0, 0, W , H);	//Создаём форму большого прямоугольника, который заполняет всё полотно.
+			Brush BrushSquart = DrafManager.RandomColorBrush();	//Создаём кисть с случайным цветом.
 
-			graph.FillRectangle(BrushSquart, SquartOne);
+			graph.FillRectangle(BrushSquart, SquartOne);	//Заполняем форму кистью
 
 			int PaddingSquartTwoW = (W / 10);
 			int PaddingSquartTwoH = (H / 10);
-			Rectangle SquartTwo = new Rectangle(PaddingSquartTwoW, PaddingSquartTwoH, W-2*PaddingSquartTwoW,H - 2*PaddingSquartTwoH) ;
+			Rectangle SquartTwo = new Rectangle(PaddingSquartTwoW, PaddingSquartTwoH, W-2*PaddingSquartTwoW,H - 2*PaddingSquartTwoH) ;	//Создаём форму с отступами слева сверху и снизу права.
 			Brush BrushSquartTwo = DrafManager.RandomColorBrush();
 
 			graph.FillRectangle(BrushSquartTwo, SquartTwo);
@@ -44,36 +44,36 @@ namespace Labaratornay4VladimirovKV
 
 			int R, G, B, SizePenElipse;
 
-			R = CorrectInputRGB(TextBoxR);
-			G = CorrectInputRGB(TextBoxG);
-			B = CorrectInputRGB(TextBoxB);
-			SizePenElipse = CorrectInput(TextBoxSizeLine);
+			R = CorrectInputRGB(TextBoxR);	//Проверяем на ввод
+			G = CorrectInputRGB(TextBoxG);	//Проверяем на ввод
+			B = CorrectInputRGB(TextBoxB);	//Проверяем на ввод
+			SizePenElipse = CorrectInput(TextBoxSizeLine);	//Проверяем на ввод
 			Pen PenElipseLine = new Pen(Color.Gray, SizePenElipse);
-			Brush BrushElepse = new SolidBrush(Color.FromArgb(R, G, B));
+			Brush BrushElepse = new SolidBrush(Color.FromArgb(R, G, B));	//Создаём кисть с параметрами указаными пользователем
 
-			Rectangle Elipse = new Rectangle(PaddingSquartTwoW + W / 8, PaddingSquartTwoH + H / 4, W - 2 * (PaddingSquartTwoW + W / 8), H - 2 * (PaddingSquartTwoH + H / 4));
+			Rectangle Elipse = new Rectangle(PaddingSquartTwoW + W / 8, PaddingSquartTwoH + H / 4, W - 2 * (PaddingSquartTwoW + W / 8), H - 2 * (PaddingSquartTwoH + H / 4));		//Создаём форму с отступами
 
-			graph.DrawEllipse(PenElipseLine, Elipse);
-			graph.FillEllipse(BrushElepse, Elipse);
+			graph.DrawEllipse(PenElipseLine, Elipse);	//отрисовываем обвотку вокруг малого эллипса
+			graph.FillEllipse(BrushElepse, Elipse);	//Заливаем форму эллипса
 
-			pictureBox1.Image = bmp;
+			pictureBox1.Image = bmp;	//Выгружаем картинку в PictureBox
 		}
 
 		static int CorrectInputRGB(TextBox TextBox)
 		{
 
-			if (TextBox.Text != "")
+			if (TextBox.Text != "")	//Проверяем не пустое ли поле
 			{
 				
 
-				if (IsNum(TextBox.Text))
+				if (IsNum(TextBox.Text))	//Проверяем текст содержит цифры или нет
 				{
 					int Value;
 					Value = Convert.ToInt32(TextBox.Text);
 
-					if (Value < 0) Value = 0;
-					Value %= 256;
-					TextBox.Text = String.Format("{0}", Value);
+					if (Value < 0) Value = 0;	//Отсекаем отрицательные цифры
+					if(Value > 255) Value = 255;
+					TextBox.Text = String.Format("{0}", Value);	//Отображаем изменения
 
 					return Value;
 				}
@@ -112,7 +112,7 @@ namespace Labaratornay4VladimirovKV
 			return 0;
 		}
 
-		static bool IsNum(string s)
+		static bool IsNum(string s)	//Проверяем строчку состоит она из цифр или других символов
 		{
 			foreach (char c in s)
 			{
